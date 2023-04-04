@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fabric fit view</title>
+    <style>
+        .canvas_container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .canvas-container {
+            position: absolute;
+            width: 800px;
+            height: 800px;
+            background-color: hsla(0, 0%, 100%, 1);
+            left: 400px;
+            top: 40px;
+            border: 1px solid #000;
+        }
+
+        #btn {
+            position: relative;
+            left: 400px;
+            top: 20px;
+            width: 60px;
+            height: 32px;
+            border: 1px solid #ddd;
+            text-align: center;
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="canvas_container">
+        <div id="btn">fit view</div>
+        <canvas id="fabricTest"></canvas>
+    </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/5.3.1/fabric.min.js"
+    integrity="sha512-CeIsOAsgJnmevfCi2C7Zsyy6bQKi43utIjdA87Q0ZY84oDqnI0uwfM9+bKiIkI75lUeI00WG/+uJzOmuHlesMA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="./index.js"></script>
+<script>
+    window.onload = function () {
+        const canvas = new fabric.Canvas('fabricTest', {
+            width: 800,
+            height: 800,
+        });
+        window.canvas = canvas;
+
+        const test = [
+            [20, 20],
+            [487, 325],
+            [367, 682],
+            [671, 462],
+            [838, 462],
+            [838, 923],
+        ];
+
+        for (let pos of test) {
+            const rect = new fabric.Rect({
+                width: 50,
+                height: 50,
+                fill: 'red',
+                left: pos[0],
+                top: pos[1],
+            });
+            canvas.add(rect);
+        }
+    }
+
+    document.getElementById('btn').onclick = function () {
+        if (!window.canvas) return;
+
+        fitView(window.canvas, {
+            padding: {
+                left: 100,
+                height: 100,
+                top: 100,
+                bottom: 100,
+            }
+        });
+    }
+</script>
+
+</html>

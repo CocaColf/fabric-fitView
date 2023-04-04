@@ -1,0 +1,17 @@
+{
+  "name": "fabric-fitView",
+  "version": "1.0.0",
+  "author": "CocaColf <cocacolf@gmail.com>",
+  "main": "index.js",
+  "files": [
+    "dist"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "rm -rf dist/ && tsc",
+    "lint": "eslint . --ext .ts"
+  },
+  "devDependencies": {
+    "@types/fabric": "^5.3.0"
+  }
+}

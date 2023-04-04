@@ -1,0 +1,19 @@
+{
+	"compilerOptions": {
+		"outDir": "./dist",
+		"target": "ES6",
+		"useDefineForClassFields": true,
+		"module": "ES6",
+		"moduleResolution": "Node",
+		"strict": true,
+		"jsx": "preserve",
+		"sourceMap": false,
+		"resolveJsonModule": true,
+		"isolatedModules": true,
+		"esModuleInterop": true,
+		"lib": ["ESNext", "DOM"],
+		"skipDefaultLibCheck": true,
+		"skipLibCheck": true,
+	},
+	"include": ["src/**/*.ts", "src/**/*.d.ts"],
+}
