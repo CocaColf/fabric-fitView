@@ -1,4 +1,4 @@
-# fabric-fitView
+# fabric-fitview
 
 A Fabric.js library that makes objects adapt to the canvas and keeps all objects within the viewport of the canvas.
 
@@ -7,11 +7,11 @@ A Fabric.js library that makes objects adapt to the canvas and keeps all objects
 # Usage
 
 ```bash
-yarn add fabric-fitView
+yarn add fabric-fitview
 ```
 
 ```javascript
-import { fitView } from 'fabric-fitView';
+import { fitView } from 'fabric-fitview';
 
 fitView(canvas, options);
 ```
@@ -34,7 +34,7 @@ interface FitViewOptions {
 # Examples
 
 ```js
-import { fitView } from 'fabric-fitView';
+import { fitView } from 'fabric-fitview';
 
 const canvas = new fabric.Canvas('canvas');
 
